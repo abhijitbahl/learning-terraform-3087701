@@ -83,6 +83,7 @@ module "blog_alb" {
 
 module "blog_vpc" {
   source = "terraform-aws-modules/vpc/aws"
+  version = "3.14.2"
 
   name = "blog-vpc"
   cidr = "10.0.0.0/16"
