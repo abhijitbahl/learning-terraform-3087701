@@ -29,7 +29,7 @@ module "autoscaling" {
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "6.10.0"
   
-  name     = "blog"
+  name     = "blog-autoscaling"
   min_size = 1
   max_size = 2
 
@@ -99,7 +99,7 @@ module "blog_vpc" {
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.1.0"
-  name    = "blog"
+  name    = "blog-sg"
 
   vpc_id = module.blog_vpc.public_subnets[0]
   
